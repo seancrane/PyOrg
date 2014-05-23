@@ -2,3 +2,5 @@
 *.log
 *.mp3
 *.m4a
+*.pyc
+*.swp
