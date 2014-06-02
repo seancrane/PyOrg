@@ -10,13 +10,15 @@ class Strategy():
     __path = ""
     __file_name = ""
     __extension = ""
-    
-    def __init__(self, file_path):
+    __destination_directory = ""  
+
+    def __init__(self, file_path, destination_directory):
         self.__path = file_path
         self.__extract_filename(file_path)
+        self.__destination_directory = destination_directory
 
-        #if self.__extension == ".mp3":
-        #    __strategy = Mp3(self.__path)
+        if self.__extension == ".mp3":
+            __strategy = Mp3(self.__path)
         if self.__extension == ".m4a" or self.__extension == ".m4p":
             __strategy = Mp4(self.__path)
         #if self.__extension == ".flac":
